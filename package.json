@@ -1,0 +1,21 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "node -- watch index.js",
+    "dev": "nodemon index.js"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "nanoid": "^4.0.2",
+    "yargs": "^17.7.2"
+  }
+}
