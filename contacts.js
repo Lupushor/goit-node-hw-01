@@ -6,7 +6,7 @@ const contactsPath = path.join(__dirname, "./db/contacts.json");
 
 async function listContacts() {
   const data = await fs.readFile(contactsPath, "utf-8");
-  return JSON.parse(data); //разбирает строку JSON, возвращая объект JavaScript
+  return JSON.parse(data);
 }
 
 async function writeContacts(contacts) {
@@ -26,10 +26,7 @@ async function getContactById(id) {
 async function removeContact(id) {
   const contacts = await listContacts();
   const index = contacts.findIndex((contact) => contact.id === id);
-  // if (index === -1) {
-  //   return null;
-  // }
-  // const [contact] = contacts.splice(index, 1);
+
   const newContacts = [
     ...contacts.slice(0, index),
     ...contacts.slice(index + 1),
